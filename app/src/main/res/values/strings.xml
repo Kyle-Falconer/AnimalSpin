@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Animal Spin</string>
+
+    <string name="tts_cat_says">a cat says</string>
+    <string name="tts_chicken_says">a chicken says</string>
+    <string name="tts_cow_says">a cow says</string>
+    <string name="tts_dog_says">a dog says</string>
+    <string name="tts_donkey_says">donkey says</string>
+    <string name="tts_frog_says">the frog says</string>
+    <string name="tts_horse_says">the horse says</string>
+    <string name="tts_lion_says">the lion says</string>
+    <string name="tts_monkey_says">the monkey says</string>
+    <string name="tts_sheep_says">the sheep says</string>
+
+</resources>
