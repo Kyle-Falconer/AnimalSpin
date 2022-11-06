@@ -1,6 +1,5 @@
 # AnimalSpin
 
-A simple app for children, to let them listen to the noises that different animals make.
+A simple app for children, to let them listen to the noises that different animals make. Text to Speech is used to introduce the anmials.
 
-
-![](.github/Screenshot_20221106_155222.png | width=500)
+<img src=".github/Screenshot_20221106_155222.png"  width="400"/>
