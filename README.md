@@ -1,19 +1,22 @@
-# AnimalSpin
+# Animal Spin
 
 Tap the picture of the animal to listen to the name of the animal and the sound it makes.
 
-This is a simple educational app for children ages 1.5+, to let them listen to the noises that different animals make. Text to Speech is used to introduce the anmials.
+This is a simple educational Android app for children ages 1.5+, to let them listen to the noises that different animals make. Text to Speech is used to introduce the anmials.
 
 ## Features
 
 - [x] animal noises and pictures in a tap and listen interface
 - [x] offline only - no internet connection required
 - [x] so simple a 1 year old can use it
-- [x] has voice customization
-- [ ] can have TTS voice disabled (TBD, see issue #6)
-- [x] advertizing and tracking-free
+- [x] has voice (TTS) customization
+- [ ] can have TTS voice disabled (TBD, see [issue #6](https://github.com/Kyle-Falconer/AnimalSpin/issues/6))
+- [X] full screen interface to avoid accidental exiting of the app
+- [X] settings page for changing app settings like TTS options
+- [x] No advertizing
+- [X] No app tracking
 - [x] [Free and Open Source](https://www.gnu.org/philosophy/floss-and-foss.en.html)
-- [ ] available on the Google Play Store (TBD, see issue #7)
+- [ ] available on the Google Play Store (TBD, see [issue #7](https://github.com/Kyle-Falconer/AnimalSpin/issues/7))
 
 <img src=".github/Screenshot_20221106_155222.png"  width="400"/>
 
