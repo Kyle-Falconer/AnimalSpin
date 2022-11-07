@@ -13,7 +13,7 @@ This is a simple educational Android app for children ages 1.5+, to let them lis
 - [ ] can have TTS voice disabled (TBD, see [issue #6](https://github.com/Kyle-Falconer/AnimalSpin/issues/6))
 - [X] full screen interface to avoid accidental exiting of the app
 - [X] settings page for changing app settings like TTS options
-- [x] No advertizing
+- [x] No advertising
 - [X] No app tracking
 - [x] [Free and Open Source](https://www.gnu.org/philosophy/floss-and-foss.en.html)
 - [ ] available on the Google Play Store (TBD, see [issue #7](https://github.com/Kyle-Falconer/AnimalSpin/issues/7))
