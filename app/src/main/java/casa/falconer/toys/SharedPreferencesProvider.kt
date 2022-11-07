@@ -39,7 +39,7 @@ class SharedPreferencesProvider {
 
     fun getSelectedVoiceName(): String? {
         val prefs = context.getSharedPreferences(ANIMAL_SPIN_MAIN_PREFS, MODE_PRIVATE)
-        return prefs.getString(SELECTED_VOICE_NAME, null)
+        return prefs.getString(SELECTED_VOICE_NAME, DEFAULT_VOICE_NAME)
     }
 
     fun getVoiceOptions(): List<String> {
@@ -61,7 +61,8 @@ class SharedPreferencesProvider {
         private const val VOICE_SPEED = "voice_speed"
         private const val SELECTED_VOICE_NAME = "voice_name"
         private const val VOICE_OPTIONS = "voice_options"
-        private const val DEFAULT_VOICE_SPEED = 0.9f
-        private const val DEFAULT_VOICE_PITCH = 0.9f
+        private const val DEFAULT_VOICE_SPEED = 0.6f
+        private const val DEFAULT_VOICE_PITCH = 0.6f
+        private const val DEFAULT_VOICE_NAME = "en-us-x-iom-local"
     }
 }

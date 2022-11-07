@@ -13,6 +13,8 @@ import android.view.ViewGroup
 import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -59,40 +61,16 @@ class MainFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_main, container, false)
 
         val animalsRV = view.findViewById<RecyclerView>(R.id.animalsRecyclerView)
-//        animalsRV.layoutManager = LinearLayoutManager(context)
         animalsRV.layoutManager = GridLayoutManager(context, 2)
-//        animalsRV.layoutManager = ArcLayoutManager(requireContext())
 
         animalsRV.adapter = AnimalsAdapter(Animal.values().asList()) { clickedAnimal ->
             viewModel.queueAnimalNoise(clickedAnimal)
             playAnimalNoise()
         }
-//        val cowButton: AppCompatButton = view.findViewById(R.id.buttonCow)
-//        cowButton.setOnClickListener {
-//            viewModel.queueAnimalNoise(Animal.COW)
-//            playAnimalNoise()
-//        }
-//        val donkeyButton: AppCompatButton = view.findViewById(R.id.buttonDonkey)
-//        donkeyButton.setOnClickListener {
-//            viewModel.queueAnimalNoise(Animal.DONKEY)
-//            playAnimalNoise()
-//        }
-//        val frogButton: AppCompatButton = view.findViewById(R.id.buttonFrog)
-//        frogButton.setOnClickListener {
-//            viewModel.queueAnimalNoise(Animal.FROG)
-//            playAnimalNoise()
-//        }
-//        val catButton: AppCompatButton = view.findViewById(R.id.buttonCat)
-//        catButton.setOnClickListener {
-//            viewModel.queueAnimalNoise(Animal.CAT)
-//            playAnimalNoise()
-//        }
-
 
         val settingsButton: AppCompatButton = view.findViewById(R.id.settingsButton)
         settingsButton.setOnClickListener {
-            val intent = Intent(activity, SettingsActivity::class.java)
-            startActivity(intent)
+            findNavController().navigate(R.id.action_mainFragment_to_settingsFragment)
         }
 
         return view
@@ -131,14 +109,16 @@ class MainFragment : Fragment() {
             it.setSpeechRate(viewModel.voiceSpeed)
             it.setPitch(viewModel.voicePitch)
             val voicesMap = it.voices.filter { voice ->
-                voice.locale == ttsLanguage && voice.isNetworkConnectionRequired == false
+                voice.locale == ttsLanguage && !voice.isNetworkConnectionRequired
             }.map { it.name to it }.toMap()
 
             val voiceNames: List<String> = voicesMap.values.map { voice -> voice.name }
             viewModel.saveVoiceOptions(voiceNames)
 
             viewModel.getSelectedVoiceName()?.let { selectedVoiceName ->
-                it.voice = voicesMap[selectedVoiceName]
+                if (selectedVoiceName in voicesMap) {
+                    it.voice = voicesMap[selectedVoiceName]
+                }
             }
         }
     }

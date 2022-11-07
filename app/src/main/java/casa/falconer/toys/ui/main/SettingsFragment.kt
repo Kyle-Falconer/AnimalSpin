@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import androidx.appcompat.widget.AppCompatButton
+import androidx.navigation.fragment.findNavController
 import casa.falconer.toys.MainActivity
 import casa.falconer.toys.R
 import com.google.android.material.slider.Slider
@@ -69,8 +70,7 @@ class SettingsFragment : Fragment() {
         val saveButton: AppCompatButton = view.findViewById(R.id.saveButton)
         saveButton.setOnClickListener {
             viewModel.saveOptions()
-            val intent = Intent(activity, MainActivity::class.java)
-            startActivity(intent)
+            findNavController().navigateUp()
         }
 
         return view
