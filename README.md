@@ -1,6 +1,6 @@
 # AnimalSpin
 
-A simple app for children, to let them listen to the noises that different animals make. Text to Speech is used to introduce the anmials.
+A simple app for children ages 1.5+, to let them listen to the noises that different animals make. Text to Speech is used to introduce the anmials.
 
 ## Features
 
@@ -18,5 +18,6 @@ A simple app for children, to let them listen to the noises that different anima
 
 ## Contributing
 
-* any assets added should have a free-to-use origin, and ideally be under either a Creative Commons or Public Domain license.
+* this project is designed to be developed using [Android Studio](https://developer.android.com/studio) using the latest techniques and libraries for Android app development.
 * Pull Requests are welcome, please fork the repo, make commit your changes, and then open a pull request to have it merged in. See [GitHub Flow](https://docs.github.com/en/get-started/quickstart/github-flow) for more details.
+* any assets added should have a free-to-use origin, and ideally be under either a Creative Commons or Public Domain license.
