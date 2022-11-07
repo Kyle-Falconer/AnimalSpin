@@ -1,7 +1,6 @@
 package casa.falconer.toys.ui.main
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,13 +12,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import casa.falconer.toys.R
 import com.google.android.material.slider.Slider
+import timber.log.Timber
 
 class SettingsFragment : Fragment() {
-
-    companion object {
-        val TAG: String = SettingsFragment::class.java.simpleName
-        fun newInstance() = SettingsFragment()
-    }
 
     private lateinit var viewModel: SettingsViewModel
 
@@ -48,20 +43,20 @@ class SettingsFragment : Fragment() {
         }
         voicesRadioGroup.setOnCheckedChangeListener { group, checkedId ->
             viewModel.setSelectedVoiceId(checkedId)
-            Log.d(TAG, "voice changed to ${viewModel.selectedVoiceName}")
+            Timber.d("voice changed to ${viewModel.selectedVoiceName}")
         }
 
         val pitchSlicer = view.findViewById<Slider>(R.id.voicePitchSlider)
         pitchSlicer.value = viewModel.voicePitch
         pitchSlicer.addOnChangeListener { slider, value, fromUser ->
-            Log.d(TAG, "pitch changed to $value")
+            Timber.d("pitch changed to $value")
             viewModel.voicePitch = value
         }
 
         val speedSlicer = view.findViewById<Slider>(R.id.voiceSpeedSlider)
         speedSlicer.value = viewModel.voicePitch
         speedSlicer.addOnChangeListener { slider, value, fromUser ->
-            Log.d(TAG, "speed changed to $value")
+            Timber.d("speed changed to $value")
             viewModel.voiceSpeed = value
         }
 

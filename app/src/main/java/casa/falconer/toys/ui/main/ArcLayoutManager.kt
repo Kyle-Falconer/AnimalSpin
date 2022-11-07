@@ -5,7 +5,9 @@ import android.content.Context
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import androidx.recyclerview.widget.RecyclerView
-import kotlin.math.*
+import kotlin.math.PI
+import kotlin.math.acos
+import kotlin.math.sin
 
 class ArcLayoutManager(
     private val context: Context,
@@ -65,8 +67,10 @@ class ArcLayoutManager(
 //        }
     }
 
-    private fun computeYComponent(viewCenterX: Float,
-                                  h: Float): Pair<Int, Double> {
+    private fun computeYComponent(
+        viewCenterX: Float,
+        h: Float
+    ): Pair<Int, Double> {
         val screenWidth = context.resources.displayMetrics.widthPixels
         val s = screenWidth.toDouble() / 2
         val radius = (h * h + s * s) / (h * 2)

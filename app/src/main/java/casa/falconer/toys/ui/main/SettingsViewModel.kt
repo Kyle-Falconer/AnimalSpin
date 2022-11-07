@@ -1,8 +1,8 @@
 package casa.falconer.toys.ui.main
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import casa.falconer.toys.SharedPreferencesProvider
+import timber.log.Timber
 
 class SettingsViewModel : ViewModel() {
     var prefs: SharedPreferencesProvider = SharedPreferencesProvider()
@@ -31,7 +31,7 @@ class SettingsViewModel : ViewModel() {
     }
 
     fun saveOptions() {
-        Log.d(TAG, "saving options")
+        Timber.d("saving options")
         prefs.setVoicePitch(voicePitch)
         prefs.setVoiceSpeed(voiceSpeed)
         selectedVoiceName?.let {

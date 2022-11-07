@@ -4,7 +4,6 @@ import android.media.MediaPlayer
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.speech.tts.UtteranceProgressListener
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,12 +15,12 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import casa.falconer.toys.R
 import casa.falconer.toys.models.Animal
+import timber.log.Timber
 import java.util.Locale
 
 class MainFragment : Fragment() {
 
     companion object {
-        val TAG: String = MainFragment::class.java.simpleName
         var mp: MediaPlayer? = null
         var tts: TextToSpeech? = null
         val ttsLanguage: Locale = Locale.US
@@ -39,7 +38,7 @@ class MainFragment : Fragment() {
                     if (result == TextToSpeech.LANG_MISSING_DATA ||
                         result == TextToSpeech.LANG_NOT_SUPPORTED
                     ) {
-                        Log.e(TAG, "This Language is not supported")
+                        Timber.e("This Language is not supported")
                     } else {
                         ttsInitialized()
                     }
@@ -74,11 +73,11 @@ class MainFragment : Fragment() {
         mp?.stop()
         tts?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
             override fun onStart(utteranceId: String?) {
-                Log.d(TAG, "tts started")
+                Timber.d("tts started")
             }
 
             override fun onDone(utteranceId: String?) {
-                Log.d(TAG, "tts finished")
+                Timber.d("tts finished")
 
                 viewModel.currentAnimalNoise?.let { an ->
                     mp = MediaPlayer.create(context, an.noiseFile)
@@ -88,7 +87,7 @@ class MainFragment : Fragment() {
 
             @Deprecated("Deprecated in Java")
             override fun onError(utteranceId: String?) {
-                Log.d(TAG, "tts error")
+                Timber.d("tts error")
             }
         })
         viewModel.currentAnimalNoise?.let { an ->

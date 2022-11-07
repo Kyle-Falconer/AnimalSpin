@@ -1,11 +1,11 @@
 package casa.falconer.toys.ui.main
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import casa.falconer.toys.SharedPreferencesProvider
 import casa.falconer.toys.models.Animal
 import casa.falconer.toys.models.AnimalNoise
 import casa.falconer.toys.models.AnimalNoise.Companion.animal_sounds
+import timber.log.Timber
 
 
 class MainViewModel : ViewModel() {
@@ -37,15 +37,16 @@ class MainViewModel : ViewModel() {
         prefs.setVoiceOptions(voices)
     }
 
-    fun getSelectedVoiceName() :String? {
+    fun getSelectedVoiceName(): String? {
         return prefs.getSelectedVoiceName()
     }
 
     fun getRandomAnimalNoise(animal: Animal): AnimalNoise? {
         val availableNoiseCount: Int = animalNoiseMap[animal]?.size ?: 0
-        Log.d(TAG, "there are $availableNoiseCount sounds for ${animal.name}")
+        Timber.d("there are $availableNoiseCount sounds for ${animal.name}")
         return animalNoiseMap[animal]?.randomOrNull()
     }
+
     companion object {
         val TAG: String = MainViewModel::class.java.simpleName
     }
