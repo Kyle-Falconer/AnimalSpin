@@ -1,11 +1,13 @@
 # AnimalSpin
 
-A simple app for children ages 1.5+, to let them listen to the noises that different animals make. Text to Speech is used to introduce the anmials.
+Tap the picture of the animal to listen to the name of the animal and the sound it makes.
+
+This is a simple educational app for children ages 1.5+, to let them listen to the noises that different animals make. Text to Speech is used to introduce the anmials.
 
 ## Features
 
 - [x] animal noises and pictures in a tap and listen interface
-- [x] offline only
+- [x] offline only - no internet connection required
 - [x] so simple a 1 year old can use it
 - [x] has voice customization
 - [ ] can have TTS voice disabled (TBD, see issue #6)
