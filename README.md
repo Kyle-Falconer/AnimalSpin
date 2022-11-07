@@ -24,8 +24,8 @@ This is a simple educational Android app for children ages 1.5+, to let them lis
 ## Contributing
 
 * this project is designed to be developed using [Android Studio](https://developer.android.com/studio) using the latest techniques and libraries for Android app development.
-* Pull Requests are welcome, please fork the repo, make commit your changes, and then open a pull request to have it merged in. See [GitHub Flow](https://docs.github.com/en/get-started/quickstart/github-flow) for more details.
-* any assets added should have a free-to-use origin, and ideally be under either a Creative Commons or Public Domain license.
+* Pull Requests are welcome, please fork the repo, make a commit of your changes, and then open a pull request to have it reviewed and merged in. See [GitHub Flow](https://docs.github.com/en/get-started/quickstart/github-flow) for more details.
+* any assets (image/audio) added should have a free-to-use origin, and ideally be under either a Creative Commons or Public Domain license.
 
 
 ## Content Ownership
