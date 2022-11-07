@@ -4,8 +4,8 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import casa.falconer.toys.SharedPreferencesProvider
 
-class SettingsViewModel  : ViewModel() {
-    var prefs:SharedPreferencesProvider = SharedPreferencesProvider()
+class SettingsViewModel : ViewModel() {
+    var prefs: SharedPreferencesProvider = SharedPreferencesProvider()
     var voicePitch = prefs.getVoicePitch()
     var voiceSpeed = prefs.getVoiceSpeed()
     var selectedVoiceName = prefs.getSelectedVoiceName()
@@ -20,13 +20,13 @@ class SettingsViewModel  : ViewModel() {
         }
     }
 
-    fun getSelectedVoiceId() : Int? {
+    fun getSelectedVoiceId(): Int? {
         return selectedVoiceName?.let {
             voiceOptionsNameToHashMap[it]
         } ?: voiceOptionsNameToHashMap[voiceOptions[0]]
     }
 
-    fun setSelectedVoiceId(id:Int) {
+    fun setSelectedVoiceId(id: Int) {
         selectedVoiceName = voiceOptionsHashToNameMap[id]
     }
 

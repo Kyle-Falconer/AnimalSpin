@@ -1,11 +1,9 @@
 package casa.falconer.toys.ui.main
 
-import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.speech.tts.UtteranceProgressListener
-import android.speech.tts.Voice
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -13,24 +11,20 @@ import android.view.ViewGroup
 import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import casa.falconer.toys.R
-import casa.falconer.toys.SettingsActivity
 import casa.falconer.toys.models.Animal
-import java.util.*
+import java.util.Locale
 
 class MainFragment : Fragment() {
 
     companion object {
         val TAG: String = MainFragment::class.java.simpleName
-        fun newInstance() = MainFragment()
         var mp: MediaPlayer? = null
         var tts: TextToSpeech? = null
-        val ttsLanguage = Locale.US
+        val ttsLanguage: Locale = Locale.US
     }
 
     private lateinit var viewModel: MainViewModel
@@ -76,8 +70,7 @@ class MainFragment : Fragment() {
         return view
     }
 
-
-    fun playAnimalNoise() {
+    private fun playAnimalNoise() {
         mp?.stop()
         tts?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
             override fun onStart(utteranceId: String?) {

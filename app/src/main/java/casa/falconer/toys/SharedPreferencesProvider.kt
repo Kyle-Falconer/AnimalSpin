@@ -44,7 +44,7 @@ class SharedPreferencesProvider {
 
     fun getVoiceOptions(): List<String> {
         val prefs = context.getSharedPreferences(ANIMAL_SPIN_MAIN_PREFS, MODE_PRIVATE)
-        val opts =  prefs.getStringSet(VOICE_OPTIONS, mutableSetOf<String>())
+        val opts = prefs.getStringSet(VOICE_OPTIONS, mutableSetOf<String>())
         return opts!!.toList().sorted()
     }
 
