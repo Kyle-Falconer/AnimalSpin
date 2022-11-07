@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Animal Spin</string>
 
+    <!-- Animal TTS Values -->
     <string name="tts_cat_says">a cat says</string>
     <string name="tts_chicken_says">a chicken says</string>
     <string name="tts_cow_says">a cow says</string>
@@ -11,5 +11,16 @@
     <string name="tts_lion_says">the lion says</string>
     <string name="tts_monkey_says">the monkey says</string>
     <string name="tts_sheep_says">the sheep says</string>
+
+    <!-- App labels -->
+    <string name="app_name">Animal Spin</string>
+    <string name="settings_btn">settings</string>
+    <string name="settings">settings</string>
+    <string name="voices">voices</string>
+    <string name="voice_pitch">voice pitch</string>
+    <string name="voice_pitch_slider">voice pitch</string>
+    <string name="voice_speed">voice speed</string>
+    <string name="voice_speed_slider">voice speed</string>
+    <string name="save_btn">save</string>
 
 </resources>

@@ -16,58 +16,12 @@
         app:layout_constraintStart_toStartOf="parent"
         />
 
-<!--    <androidx.appcompat.widget.AppCompatButton-->
-<!--        android:id="@+id/buttonCow"-->
-<!--        android:layout_width="200dp"-->
-<!--        android:layout_height="200dp"-->
-<!--        android:background="@drawable/cow_female_black_white"-->
-<!--        android:layout_marginBottom="40dp"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:contentDescription="cow"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        />-->
-<!--    <androidx.appcompat.widget.AppCompatButton-->
-<!--        android:id="@+id/buttonDonkey"-->
-<!--        android:layout_width="200dp"-->
-<!--        android:layout_height="200dp"-->
-<!--        android:layout_margin="40dp"-->
-<!--        android:background="@drawable/donkey_in_clovelly_north_devon_england"-->
-<!--        android:contentDescription="donkey"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/buttonCow"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        />-->
-<!--    <androidx.appcompat.widget.AppCompatButton-->
-<!--        android:id="@+id/buttonFrog"-->
-<!--        android:layout_width="200dp"-->
-<!--        android:layout_height="200dp"-->
-<!--        android:layout_margin="40dp"-->
-<!--        android:background="@drawable/variegated_golden_frog_mantella_baroni_ranomafana"-->
-<!--        android:contentDescription="frog"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/buttonDonkey"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        />-->
-<!--    <androidx.appcompat.widget.AppCompatButton-->
-<!--        android:id="@+id/buttonCat"-->
-<!--        android:layout_width="200dp"-->
-<!--        android:layout_height="200dp"-->
-<!--        android:layout_margin="40dp"-->
-<!--        android:background="@drawable/cat_1"-->
-<!--        android:contentDescription="cat"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/buttonFrog"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        />-->
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/settingsButton"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_margin="20dp"
-        android:contentDescription="settings"
+        android:contentDescription="@string/settings_btn"
         android:background="@drawable/ic_baseline_settings_24"
         android:backgroundTint="@color/settings_btn"
         app:layout_constraintBottom_toBottomOf="parent"
